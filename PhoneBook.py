@@ -1,4 +1,5 @@
 class Address:
+    """ Class to store Address"""
     def __init__(self, street, city, state, zipcode, street2=''):
         self.street = street
         self.street2 = street2
@@ -14,12 +15,14 @@ class Address:
         return '\n'.join(lines)
 
 class Category:
+    """ Class to store Category in phonebook """
     def __init__(self,category) -> None:
         self.category = category
 
     def __str__(self) -> str:
         return f"{self.category}"
 class Contact:
+    """ Class to store phone number & Email """
     def __init__(self,telnumber='') -> None:
         self.telnumber = telnumber
     @property
@@ -54,8 +57,8 @@ class Contact:
             print("this email is not valid ")  
     def __str__(self) -> str:
         return f"{self.telnumber}\nEmail: {self.email}"
-    
 class Person:
+    """ Class to store person information """
     def __init__(self, id, fname,lname,category,contact):
         self.id = id
         self.fname = fname
@@ -69,6 +72,8 @@ class Person:
 
 
 class Phone_book:
+    """ Class to store contact in list"""
+
     records = []
 
     def add(self):
